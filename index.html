@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decodificador Alura ONE</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header>
+        <img class="logo" src="./assets/logo-alura.svg" alt="Logo da Alura">
+    </header>
+
+    <main>
+        <section class="input-text-container">
+            <textarea id="text-input" class="text-area user-input" cols="41" rows="4" placeholder="Digite seu texto"></textarea>
+
+            <div class="warning-message-container">
+                <img class="warning-icon" src="./assets/warning-icon.svg" alt="ícone de aviso">
+                <p class="warning-message">Apenas letras minúsculas e sem acento.</p>
+            </div>
+
+            <div class="action-buttons">
+                <button id="encrypt-button" class="button encrypt-button">Criptografar</button>
+                <button id="decrypt-button" class="button decrypt-button">Descriptografar</button>
+            </div>
+        </section>
+
+        <aside id="output-text-container" class="output-text-container">
+           <img src="./assets/empty-output-image.svg" alt="Pessoa procurando algo com uma lupa">
+           <div class="empty-info">
+                <h3 class="empty-title">Nenhuma mensagem encontrada</h3>
+                <p class="empty-paragraph">Digite um texto que você deseja criptografar ou descriptografar.</p>
+           </div>
+        </aside>
+    </main>
+
+    <script src="./js/index.js"></script>
+</body>
+</html>

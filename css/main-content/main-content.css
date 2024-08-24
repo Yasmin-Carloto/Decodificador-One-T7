@@ -1,0 +1,95 @@
+main {
+    display: flex;
+    justify-content: space-around;
+}
+
+.text-area {
+    border: none;
+    resize: none;
+    color: #0A3871;
+    margin-top: 1em;
+}
+
+.text-area:focus{
+    outline: none;
+}
+
+.user-input {
+    background: #E5E5E5;
+}
+
+::placeholder {
+    color: #0A3871;
+}
+
+.warning-message-container{
+    display: flex;
+    gap: 0.2em;
+    margin: 0.5em 0;
+}
+
+.warning-message{
+    font-size: 12px;
+}
+
+.output-text-container {
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.5em;
+    background-repeat: no-repeat;
+    border: none;
+    background-color: #fff;
+    padding: 1em;
+    width: 25%;
+}
+
+.user-output{
+    background-color: #fff;
+    width: 100%;
+    word-wrap: break-word;
+}
+
+.user-output:focus {
+    outline: none;
+}
+
+.empty-info{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5em;
+    color: #343A40;
+}
+
+.empty-title {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.empty-paragraph {
+    font-size: 16px;
+}
+
+.action-buttons {
+    display: flex;
+    margin-top: 2em;
+}
+
+.button {
+    background: #D8DFE8;
+    border: 1px solid #0A3871;
+    border-radius: 2em;
+    cursor: pointer;
+    padding: 1em;
+    font-size: 16px;
+    margin: 1em;
+}
+
+.button:hover{
+    background: #67a9ff;
+}
+
+.encrypt-button{
+    background-color: #0A3871;
+    color: #fff;
+}
