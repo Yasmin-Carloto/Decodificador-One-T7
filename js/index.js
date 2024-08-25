@@ -10,9 +10,9 @@ function validate() {
     }
 }
 
-function displayError() {
+function displayError() {    
     outputTextContainer.innerHTML = ""
-
+    
     const emptyImage = document.createElement("img")
     emptyImage.src = "../assets/empty-output-image.svg"
 
@@ -77,18 +77,19 @@ for(let button of buttonsForTextActions){
         event.preventDefault()
 
         const validationResponse = validate()
-        let textToDisplay
 
-        if(validationResponse == ""){
+        if(validationResponse.length <= 0){
             displayError()
         }else{
+            let textToDisplay
+
             if(button.id == "encrypt-button"){
                 textToDisplay = encryptText(validationResponse)
             }else{
                 textToDisplay = decryptText(validationResponse)
             }
+            
+            displayText(textToDisplay)
         }
-
-        displayText(textToDisplay)
     })
 }
