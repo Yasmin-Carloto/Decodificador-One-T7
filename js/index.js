@@ -80,7 +80,7 @@ for(let button of buttonsForTextActions){
         let textToDisplay
 
         if(validationResponse == ""){
-            displayError
+            displayError()
         }else{
             if(button.id == "encrypt-button"){
                 textToDisplay = encryptText(validationResponse)
