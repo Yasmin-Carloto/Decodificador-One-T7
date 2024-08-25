@@ -15,7 +15,7 @@ function displayError() {
     outputTextContainer.innerHTML = ""
 
     const emptyImage = document.createElement("img")
-    emptyImage.src = "/assets/empty-output-image.svg"
+    emptyImage.src = "./assets/empty-output-image.svg"
 
     const titleEmpty = document.createElement("h2")
     titleEmpty.className = "empty-title"
