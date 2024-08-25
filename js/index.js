@@ -1,8 +1,5 @@
 const textInput = document.getElementById("text-input")
-
-const decryptButton = document.getElementById("decrypt-button")
-const encryptButton = document.getElementById("encrypt-button")
-
+const buttonsForTextActions = document.querySelectorAll(".button")
 const outputTextContainer = document.getElementById("output-text-container")
 
 function validate() {
@@ -32,7 +29,6 @@ function displayError() {
 
     emptyDiv.appendChild(titleEmpty)
     emptyDiv.appendChild(emptyParagraph)
-
 
     outputTextContainer.appendChild(emptyImage)
     outputTextContainer.appendChild(emptyDiv)
@@ -76,28 +72,23 @@ function decryptText(text) {
         .replace(/ai/g, "a")
 }
 
-decryptButton.addEventListener("click", (event) => {
-    event.preventDefault()
+for(let button of buttonsForTextActions){
+    button.addEventListener("click", (event) => {
+        event.preventDefault()
 
-    const validationResponse = validate()
+        const validationResponse = validate()
+        let textToDisplay
 
-    if(validationResponse == ""){
-        displayError()
-    }else{
-        const decryptedText = decryptText(validationResponse)
-        displayText(decryptedText)
-    }
-})
+        if(validationResponse == ""){
+            displayError
+        }else{
+            if(button.id == "encrypt-button"){
+                textToDisplay = encryptText(validationResponse)
+            }else{
+                textToDisplay = decryptText(validationResponse)
+            }
+        }
 
-encryptButton.addEventListener("click", (event) => {
-    event.preventDefault()
-
-    const validationResponse = validate()
-
-    if(validationResponse == ""){
-        displayError()
-    }else{
-        const encryptedText = encryptText(validationResponse)
-        displayText(encryptedText)
-    }
-})
+        displayText(textToDisplay)
+    })
+}
