@@ -1,6 +1,8 @@
 const textInput = document.getElementById("text-input")
+
 const decryptButton = document.getElementById("decrypt-button")
 const encryptButton = document.getElementById("encrypt-button")
+
 const outputTextContainer = document.getElementById("output-text-container")
 
 function validate() {
@@ -15,7 +17,7 @@ function displayError() {
     outputTextContainer.innerHTML = ""
 
     const emptyImage = document.createElement("img")
-    emptyImage.src = "./assets/empty-output-image.svg"
+    emptyImage.src = "../assets/empty-output-image.svg"
 
     const titleEmpty = document.createElement("h2")
     titleEmpty.className = "empty-title"
@@ -75,8 +77,6 @@ function decryptText(text) {
 }
 
 decryptButton.addEventListener("click", (event) => {
-    event.preventDefault()
-
     event.preventDefault()
 
     const validationResponse = validate()
