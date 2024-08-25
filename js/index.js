@@ -14,7 +14,7 @@ function displayError() {
     outputTextContainer.innerHTML = ""
     
     const emptyImage = document.createElement("img")
-    emptyImage.src = "../assets/empty-output-image.svg"
+    emptyImage.src = "/Decodificador-One-T7/assets/empty-output-image.svg"
 
     const titleEmpty = document.createElement("h2")
     titleEmpty.className = "empty-title"
@@ -88,7 +88,7 @@ for(let button of buttonsForTextActions){
             }else{
                 textToDisplay = decryptText(validationResponse)
             }
-            
+
             displayText(textToDisplay)
         }
     })
